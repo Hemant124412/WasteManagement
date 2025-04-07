@@ -8,5 +8,20 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "regions": ["all"]
+  "regions": ["all"],
+  "headers": [
+    {
+      "source": "/(.*).(js|css|json|xml|svg|txt)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "VITE_APP_TITLE": "Eco-Event Manager",
+    "NODE_VERSION": "18"
+  }
 } 
