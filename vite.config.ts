@@ -7,5 +7,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/eco-friendly-event-planning/',
+  build: {
+    sourcemap: true,
+    outDir: 'dist',
+  },
 });
